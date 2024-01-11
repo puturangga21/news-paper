@@ -50,10 +50,7 @@ export default function Navbar() {
       <div className="hidden gap-[100px] md:flex md:items-center">
         <ul className="flex gap-[30px]">
           {navItems.map((item) => (
-            <li
-              className="text-base font-medium text-darkPrimary"
-              key={item.id}
-            >
+            <li className="text-base font-medium text-slate-800" key={item.id}>
               <a href={item.link}>{item.name}</a>
             </li>
           ))}
@@ -95,7 +92,7 @@ export default function Navbar() {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="border-b p-4 text-base font-medium text-darkPrimary"
+            className="border-b p-4 text-base font-medium text-slate-800"
           >
             <a href={item.link}>{item.name}</a>
           </li>

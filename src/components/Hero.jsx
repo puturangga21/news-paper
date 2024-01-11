@@ -12,7 +12,7 @@ export default function Hero() {
           Minimal blog template for creative expressions
         </h1>
 
-        <p className="text-textDesc mt-4 text-center text-lg md:text-2xl lg:mt-5 lg:text-[28px]">
+        <p className="mt-4 text-center text-lg text-slate-600 md:text-2xl lg:mt-5 lg:text-[28px]">
           100% customisable and SEO-friendly blog template for personal and
           commercial purposes.
         </p>

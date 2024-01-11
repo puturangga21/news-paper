@@ -7,9 +7,7 @@ export default {
     },
     extend: {
       colors: {
-        darkPrimary: "#1D2939",
         darkHover: "#0E1216",
-        textDesc: "#475467",
       },
     },
     fontFamily: {
