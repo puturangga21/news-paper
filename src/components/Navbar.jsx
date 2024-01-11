@@ -5,17 +5,27 @@ const navItems = [
   {
     id: "1",
     link: "/",
-    name: "Daily Digest",
+    name: "CNBC",
   },
   {
     id: "2",
     link: "/",
-    name: "Design Tools",
+    name: "CNN",
   },
   {
     id: "3",
     link: "/",
-    name: "Tutorials",
+    name: "Kumparan",
+  },
+  {
+    id: "4",
+    link: "/",
+    name: "Merdeka",
+  },
+  {
+    id: "5",
+    link: "/",
+    name: "Okezone",
   },
 ];
 
@@ -41,7 +51,7 @@ export default function Navbar() {
         <ul className="flex gap-[30px]">
           {navItems.map((item) => (
             <li
-              className="text-darkPrimary text-base font-medium"
+              className="text-base font-medium text-darkPrimary"
               key={item.id}
             >
               <a href={item.link}>{item.name}</a>
@@ -68,7 +78,7 @@ export default function Navbar() {
       <ul
         className={
           nav
-            ? "border-r-darkPrimary fixed left-0 top-0 h-full w-[60%] border-r bg-white duration-500 ease-in-out md:hidden"
+            ? "fixed left-0 top-0 h-full w-[60%] border-r border-r-slate-200 bg-white duration-500 ease-in-out md:hidden"
             : "fixed bottom-0 left-[-100%] top-0 w-[60%] duration-500 ease-in-out"
         }
       >
@@ -85,7 +95,7 @@ export default function Navbar() {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="text-darkPrimary border-b p-4 text-base font-medium"
+            className="border-b p-4 text-base font-medium text-darkPrimary"
           >
             <a href={item.link}>{item.name}</a>
           </li>

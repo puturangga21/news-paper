@@ -1,8 +1,8 @@
-export default function Layout({ children, mTop }) {
+export default function Layout({ children, pTop, bgColor }) {
   return (
-    <div className="container">
+    <div className={`container min-w-full ${bgColor}`}>
       <div
-        className={`flex w-[343px] md:w-[560px] lg:w-[970px] ${mTop} m-auto flex-col items-center justify-center`}
+        className={`flex w-[343px] md:w-[560px] lg:w-[970px] ${pTop} m-auto flex-col  justify-center pb-[80px]`}
       >
         {children}
       </div>

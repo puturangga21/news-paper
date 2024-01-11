@@ -2,8 +2,8 @@ import Layout from "./Layout";
 
 export default function Hero() {
   return (
-    <Layout mTop="mt-[60px] md:mt-[80px] lg:mt-[120px]">
-      <div className="flex h-10 w-[160px] rounded-[100px] bg-[#F2F4F7] transition-all ease-in hover:scale-110">
+    <Layout pTop="pt-[60px] md:pt-[80px] lg:pt-[120px]">
+      <div className="flex h-10 w-[160px] self-center rounded-[100px] bg-[#F2F4F7] transition-all ease-in hover:scale-110">
         <p className="m-auto text-sm font-semibold">👋 Meet Personally</p>
       </div>
 
