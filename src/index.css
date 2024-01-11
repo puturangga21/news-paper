@@ -13,3 +13,13 @@
 .shadow-navbar {
   box-shadow: 0px 4px 70px rgba(30, 40, 52, 8%);
 }
+
+.gradient-font {
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(234, 156, 40),
+    rgb(196, 23, 64)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
