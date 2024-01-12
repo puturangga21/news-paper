@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import { AnimatePresence, motion } from "framer-motion";
+import { menuVars, containerVars, mobileLinkVars } from "../utils/framerVars";
 
 const navItems = [
   {
@@ -37,77 +38,6 @@ export default function Navbar() {
     setNav(!nav);
   }
 
-  const menuVars = {
-    initials: {
-      scaleY: 0,
-    },
-    animate: {
-      scaleY: 1,
-      transition: {
-        duration: 0.5,
-        eased: [0.12, 0, 0.39, 0],
-      },
-    },
-    exit: {
-      scaleY: 0,
-      transition: {
-        delay: 0.5,
-        duration: 0.5,
-        eased: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-
-  const mobileLinkVars = {
-    initial: {
-      y: "30vh",
-      transition: {
-        duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
-      },
-    },
-    open: {
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0, 0.55, 0.45, 1],
-      },
-    },
-  };
-
-  const mobileHeaderVars = {
-    initial: {
-      y: "30vh",
-      transition: {
-        duration: 0.3,
-        ease: [0.37, 0, 0.63, 1],
-      },
-    },
-    open: {
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: [0, 0.55, 0.45, 1],
-      },
-    },
-  };
-
-  const containerVars = {
-    initial: {
-      transition: {
-        staggerChildren: 0.09,
-        staggerDirection: -1,
-      },
-    },
-    open: {
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.09,
-        staggerDirection: 1,
-      },
-    },
-  };
-
   return (
     <>
       {/* Navbar desktop & tablet */}
@@ -135,7 +65,7 @@ export default function Navbar() {
 
         <div className="block md:hidden">
           <p
-            className="text-base font-medium text-slate-800"
+            className="cursor-pointer text-base font-medium text-slate-800"
             onClick={handleNav}>
             Menu
           </p>
