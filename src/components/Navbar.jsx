@@ -10,23 +10,23 @@ const navItems = [
   {
     id: "2",
     link: "/",
-    name: "Invesment",
-  },
-  {
-    id: "3",
-    link: "/",
     name: "Market",
   },
-  {
-    id: "4",
-    link: "/",
-    name: "Enterpreneur",
-  },
-  {
-    id: "5",
-    link: "/",
-    name: "Tech",
-  },
+  // {
+  //   id: "3",
+  //   link: "/",
+  //   name: "Market",
+  // },
+  // {
+  //   id: "4",
+  //   link: "/",
+  //   name: "Enterpreneur",
+  // },
+  // {
+  //   id: "5",
+  //   link: "/",
+  //   name: "Tech",
+  // },
 ];
 
 export default function Navbar() {
