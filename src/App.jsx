@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import SecondNews from "./components/SecondNews";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <FirstNews />
       <SecondNews />
       <Footer />
+      <Analytics />
     </>
   );
 }
