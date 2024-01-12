@@ -5,27 +5,27 @@ const navItems = [
   {
     id: "1",
     link: "/",
-    name: "CNBC",
+    name: "Terbaru",
   },
   {
     id: "2",
     link: "/",
-    name: "CNN",
+    name: "Invesment",
   },
   {
     id: "3",
     link: "/",
-    name: "Kumparan",
+    name: "Market",
   },
   {
     id: "4",
     link: "/",
-    name: "Merdeka",
+    name: "Enterpreneur",
   },
   {
     id: "5",
     link: "/",
-    name: "Okezone",
+    name: "Tech",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="shadow-navbar flex items-center justify-between px-4 py-[22px] md:px-[37px] md:py-[32px] lg:px-[70px] lg:py-[30px]">
+    <nav className="shadow-navbar navbar-glass fixed top-0 z-[9999] flex w-full items-center justify-between px-4 py-[22px] md:px-[37px] md:py-[32px] lg:px-[70px] lg:py-[30px]">
       <a href="/">
         <img
           src="./personally-logo.svg"
@@ -75,8 +75,8 @@ export default function Navbar() {
       <ul
         className={
           nav
-            ? "fixed left-0 top-0 h-full w-[60%] border-r border-r-slate-200 bg-white duration-500 ease-in-out md:hidden"
-            : "fixed bottom-0 left-[-100%] top-0 w-[60%] duration-500 ease-in-out"
+            ? " fixed left-0 top-0 h-full w-[60%] border-r border-r-slate-200 bg-white duration-500 ease-in-out md:hidden"
+            : " fixed bottom-0 left-[-100%] top-0  w-[60%] duration-500 ease-in-out"
         }
       >
         {/* Mobile logo */}
@@ -92,7 +92,7 @@ export default function Navbar() {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="border-b p-4 text-base font-medium text-slate-800"
+            className="border-b bg-white p-4 text-base font-medium text-slate-800"
           >
             <a href={item.link}>{item.name}</a>
           </li>

@@ -23,3 +23,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.navbar-glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px);
+  border: 1px solid rgba(255, 255, 255, 0.27);
+}
