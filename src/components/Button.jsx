@@ -10,7 +10,7 @@ export default function Button({
     <button
       className={`${display} ${weight} ${heigth} rounded-lg ${color} text-sm font-semibold text-white transition-all ease-in ${hover} lg:block`}
     >
-      <a>{children}</a>
+      {children}
     </button>
   );
 }
