@@ -11,7 +11,7 @@ export default {
       },
     },
     fontFamily: {
-      display: ["Graphik"],
+      display: ["Graphik", "Inter"],
     },
   },
   plugins: [],
