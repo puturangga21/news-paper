@@ -36,7 +36,11 @@ export default function FirstNews() {
   return (
     <Layout bgColor="bg-[#F2F4F7]" pTop="py-[40px] lg:py-[80px]">
       <div className="flex flex-col items-center justify-between">
-        <HeadingNews title="Terbaru" textColor="text-slate-800" />
+        <HeadingNews
+          title="Terbaru"
+          textColor="text-slate-800"
+          link="terbaru"
+        />
 
         <div className="mt-7 flex w-[343px] flex-col gap-4 md:w-[670px] lg:mt-8 lg:w-full lg:gap-5">
           {isLoading && <Loader />}
