@@ -6,11 +6,12 @@ import Layout from "../components/Layout";
 import CardNews from "../components/CardNews";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
+import Loader from "../components/Loader";
 
 export default function Newspage() {
   const { category } = useParams();
 
-  const { data } = useFetch(
+  const { data, isLoading, error } = useFetch(
     `https://api-berita-indonesia.vercel.app/cnbc/${category}`,
   );
 
@@ -35,8 +36,8 @@ export default function Newspage() {
 
       <Layout bgColor="bg-[#F2F4F7]" pTop="py-[40px] lg:py-[80px]">
         <div className="mt-7 flex w-[343px] flex-col gap-4 md:w-[670px] lg:mt-8 lg:w-full lg:gap-5">
-          {/* {isLoading && <Loader />}
-          {error && <p>{error}</p>} */}
+          {isLoading && <Loader />}
+          {error && <p>{error}</p>}
           {data &&
             data.slice(0, 10).map((data) => (
               <CardNews
