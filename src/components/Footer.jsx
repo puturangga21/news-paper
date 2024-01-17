@@ -36,6 +36,7 @@ export default function Footer() {
         <span role="image" className="flex items-center justify-center gap-3">
           <img src="./react-logo.svg" alt="Logo" className="w-4" />
           <img src="./tailwind-logo.svg" alt="Logo" className="w-4" />
+          <img src="./framer-logo.svg" alt="Logo" className="w-4" />
         </span>
       </div>
     </>
