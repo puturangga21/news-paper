@@ -1,17 +1,14 @@
-import FirstNews from "./components/FirstNews";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import SecondNews from "./components/SecondNews";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Newspage from "./pages/Newspage";
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <FirstNews />
-      <SecondNews />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Homepage />} />
+        <Route path="terbaru" element={<Newspage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

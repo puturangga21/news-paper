@@ -3,8 +3,8 @@ import Layout from "./Layout";
 export default function Footer() {
   return (
     <>
-      <Layout pTop="py-[40px] md:py-[60px]">
-        <div className="flex w-[343px] flex-col items-center justify-center self-center text-center md:w-[472px] lg:w-[472px]">
+      <Layout pTop="py-[40px] md:py-[60px] ">
+        <div className=" flex w-[343px] flex-col items-center justify-center self-center text-center md:w-[472px] lg:w-[472px]">
           <div className="flex flex-col gap-[10px]">
             <h1 className="gradient-font font-display text-lg font-bold md:text-[28px]">
               Personally Newsletter

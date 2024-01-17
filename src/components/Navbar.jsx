@@ -2,16 +2,17 @@ import { useState } from "react";
 import Button from "./Button";
 import { AnimatePresence, motion } from "framer-motion";
 import { menuVars, containerVars, mobileLinkVars } from "../utils/framerVars";
+import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
   {
     id: "1",
-    link: "/",
+    link: "/terbaru",
     name: "Terbaru",
   },
   {
     id: "2",
-    link: "/",
+    link: "/market",
     name: "Market",
   },
   // {
@@ -42,13 +43,13 @@ export default function Navbar() {
     <>
       {/* Navbar desktop & tablet */}
       <nav className="shadow-navbar navbar-glass fixed top-0  flex w-full items-center justify-between px-4 py-[22px] md:px-[37px] md:py-[32px] lg:px-[70px] lg:py-[30px]">
-        <a href="/">
+        <Link to="/">
           <img
             src="./personally-logo.svg"
             alt="Logo"
             className="w-[99px] md:w-full"
           />
-        </a>
+        </Link>
 
         <div className="hidden gap-[100px] md:flex md:items-center">
           <ul className="flex gap-[30px]">
@@ -56,7 +57,9 @@ export default function Navbar() {
               <li
                 className="text-base font-medium text-slate-800"
                 key={item.id}>
-                <a href={item.link}>{item.name}</a>
+                <NavLink to={item.link} href={item.link} className="">
+                  {item.name}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -112,7 +115,9 @@ export default function Navbar() {
                     <motion.div
                       variants={mobileLinkVars}
                       className="font-display text-4xl font-semibold uppercase text-white">
-                      <a href={item.link}>{item.name}</a>
+                      <NavLink to={item.link} href={item.link}>
+                        {item.name}
+                      </NavLink>
                     </motion.div>
                   </div>
                 ))}
