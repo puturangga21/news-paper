@@ -19,7 +19,7 @@ export default function HeadingNews({
           color="bg-white"
           textColor="text-slate-800"
           display="block"
-          hover="hover:bg-[#e2e8f0]">
+          hover="hover:bg-slate-200">
           <p className={`${textColor}`}>View all</p>
         </Button>
       </Link>

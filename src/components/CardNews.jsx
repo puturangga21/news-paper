@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function CardNews({ date, title, description, img, link }) {
   return (
     <Link to={link}>
-      <div className="flex flex-col items-center justify-between rounded-[20px] bg-white md:flex-row">
+      <div className="flex flex-col items-center justify-between rounded-[20px] bg-white transition-all duration-150 ease-in hover:bg-slate-200 md:flex-row">
         <div className="px-4 pt-5 md:w-[390px] md:px-0 md:py-[26px] md:pl-[26px] lg:w-[610px] lg:p-7 ">
           <p className="mb-[20px] font-display text-xs font-medium uppercase text-gray-500 lg:mb-[30px]">
             {date}
