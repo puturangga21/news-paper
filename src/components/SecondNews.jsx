@@ -2,7 +2,7 @@ import { useFetch } from "../utils/useFetch";
 import CardNews from "./CardNews";
 import HeadingNews from "./HeadingNews";
 import Layout from "./Layout";
-import Loader from "./Loader";
+import SkeletonLoadingCard from "./SkeletonLoadingCard";
 
 export default function SecondNews() {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -15,23 +15,22 @@ export default function SecondNews() {
         <HeadingNews title="Market" textColor="text-slate-800" link="market" />
 
         <div className="mt-7 flex w-[343px] flex-col gap-4 md:w-[670px] lg:mt-8 lg:w-full lg:gap-5">
-          {isLoading && <Loader />}
+          {isLoading && <SkeletonLoadingCard />}
           {error && <p>{error}</p>}
-          {data &&
-            data.slice(0, 3).map((data) => (
-              <CardNews
-                key={data.title}
-                date={new Date(data.pubDate).toLocaleString("id-ID", {
-                  year: "numeric",
-                  day: "numeric",
-                  month: "long",
-                })}
-                title={data.title}
-                description={data.description}
-                img={data.thumbnail}
-                link={data.link}
-              />
-            ))}
+          {data.slice(0, 3).map((data) => (
+            <CardNews
+              key={data.title}
+              date={new Date(data.pubDate).toLocaleString("id-ID", {
+                year: "numeric",
+                day: "numeric",
+                month: "long",
+              })}
+              title={data.title}
+              description={data.description}
+              img={data.thumbnail}
+              link={data.link}
+            />
+          ))}
         </div>
       </div>
     </Layout>
