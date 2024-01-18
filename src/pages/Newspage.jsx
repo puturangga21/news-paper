@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import CardNews from "../components/CardNews";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
-import Loader from "../components/Loader";
+import SkeletonLoadingCard from "../components/SkeletonLoadingCard";
 
 export default function Newspage() {
   const { category } = useParams();
@@ -39,23 +39,22 @@ export default function Newspage() {
 
       <Layout bgColor="bg-[#F2F4F7]" pTop="py-[40px] lg:py-[80px]">
         <div className="mt-7 flex w-[343px] flex-col gap-4 md:w-[670px] lg:mt-8 lg:w-full lg:gap-5">
-          {isLoading && <Loader />}
+          {isLoading && <SkeletonLoadingCard />}
           {error && <p>{error}</p>}
-          {data &&
-            data.slice(0, totalNews).map((data) => (
-              <CardNews
-                key={data.title}
-                date={new Date(data.pubDate).toLocaleString("id-ID", {
-                  year: "numeric",
-                  day: "numeric",
-                  month: "long",
-                })}
-                title={data.title}
-                description={data.description}
-                img={data.thumbnail}
-                link={data.link}
-              />
-            ))}
+          {data.slice(0, totalNews).map((data) => (
+            <CardNews
+              key={data.title}
+              date={new Date(data.pubDate).toLocaleString("id-ID", {
+                year: "numeric",
+                day: "numeric",
+                month: "long",
+              })}
+              title={data.title}
+              description={data.description}
+              img={data.thumbnail}
+              link={data.link}
+            />
+          ))}
         </div>
 
         <div className="my-[60px] flex items-center justify-center">
