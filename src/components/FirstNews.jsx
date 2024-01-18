@@ -5,33 +5,9 @@ import { useFetch } from "../utils/useFetch";
 import Loader from "./Loader";
 
 export default function FirstNews() {
-  // const [data, setData] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
-  // useEffect(function () {
-  //   async function getData() {
-  //     try {
-  //       setIsLoading(true);
-  //       const res = await fetch(
-  //         `https://api-berita-indonesia.vercel.app/cnbc/terbaru/`,
-  //       );
-
-  //       const data = await res.json();
-  //       setData(data.data.posts);
-  //       // console.log(data.data.posts);
-  //     } catch (error) {
-  //       console.log(error);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   }
-
-  //   getData();
-  // }, []);
-
-  const { data, isLoading, error } = useFetch(
-    `https://api-berita-indonesia.vercel.app/cnbc/terbaru/`,
-  );
+  const { data, isLoading, error } = useFetch(`${apiUrl}/terbaru`);
 
   return (
     <Layout bgColor="bg-[#F2F4F7]" pTop="py-[40px] lg:py-[80px]">
