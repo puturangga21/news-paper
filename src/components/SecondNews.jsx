@@ -5,9 +5,9 @@ import Layout from "./Layout";
 import Loader from "./Loader";
 
 export default function SecondNews() {
-  const { data, isLoading, error } = useFetch(
-    `https://api-berita-indonesia.vercel.app/cnbc/market/`,
-  );
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const { data, isLoading, error } = useFetch(`${apiUrl}/market`);
 
   return (
     <Layout bgColor="bg-[#F2F4F7]" pTop="py-[40px] lg:py-[80px]">
