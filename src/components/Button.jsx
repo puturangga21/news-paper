@@ -6,9 +6,11 @@ export default function Button({
   display = "hidden",
   hover = "hover:bg-darkHover",
   textColor = "text-white",
+  onClick = "",
 }) {
   return (
     <button
+      onClick={onClick}
       className={`${display} ${weight} ${heigth} rounded-lg ${color} text-sm font-semibold ${textColor} transition-all ease-in ${hover} lg:block`}>
       {children}
     </button>

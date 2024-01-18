@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useFetch } from "../utils/useFetch";
+import { useState } from "react";
 
 import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
@@ -10,12 +11,14 @@ import Loader from "../components/Loader";
 
 export default function Newspage() {
   const { category } = useParams();
+  const [totalNews, setTotalNews] = useState(10);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
-  const { data, isLoading, error } = useFetch(
-    `https://api-berita-indonesia.vercel.app/cnbc/${category}`,
-  );
+  const { data, isLoading, error } = useFetch(`${apiUrl}/${category}`);
 
-  console.log(data);
+  function handleLoadMore() {
+    setTotalNews(totalNews + 5);
+  }
 
   return (
     <>
@@ -39,7 +42,7 @@ export default function Newspage() {
           {isLoading && <Loader />}
           {error && <p>{error}</p>}
           {data &&
-            data.slice(0, 10).map((data) => (
+            data.slice(0, totalNews).map((data) => (
               <CardNews
                 key={data.title}
                 date={new Date(data.pubDate).toLocaleString("id-ID", {
@@ -57,6 +60,7 @@ export default function Newspage() {
 
         <div className="my-[60px] flex items-center justify-center">
           <Button
+            onClick={() => handleLoadMore()}
             weight="w-[110px]"
             heigth="h-[44px]"
             color="bg-white"
