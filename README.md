@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/puturangga21/news-paper/image?font=Inter&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Diagonal%20Stripes&amp;stargazers=1&amp;theme=Auto" alt="project-image"></p>
 
-<p id="description">A simple news portal. Thea technology used is React as a frontend Tailwind as styling and takes API from CNBC</p>
+<p id="description">A simple news portal. Thea technology used is React as a frontend Tailwind as styling and takes API from CNBC. Design by <a href="https://www.figma.com/community/file/1084863808351306117/personally-a-minimal-blog-template-design">Elikem J. Daniels</a></p>
 
 <p align="center"><img src="https://img.shields.io/badge/react-18.2.0-blue" alt="shields"><img src="https://img.shields.io/badge/tailwindcss-3.4.1-%2338bdf8" alt="shields"><img src="https://img.shields.io/badge/vite-5.0.8-%238b5cf6" alt="shields"><img src="https://img.shields.io/badge/node-20.10.0-%2322c55e" alt="shields"></p>
 
@@ -65,3 +65,5 @@ Technologies used in the project:
 - tailwindcss
 - react
 - framer-motion
+
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind)](https://skillicons.dev)
