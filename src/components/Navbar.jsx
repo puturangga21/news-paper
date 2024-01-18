@@ -15,21 +15,26 @@ const navItems = [
     link: "/market",
     name: "Market",
   },
-  // {
-  //   id: "3",
-  //   link: "/",
-  //   name: "Market",
-  // },
-  // {
-  //   id: "4",
-  //   link: "/",
-  //   name: "Enterpreneur",
-  // },
-  // {
-  //   id: "5",
-  //   link: "/",
-  //   name: "Tech",
-  // },
+  {
+    id: "3",
+    link: "/tech",
+    name: "Tech",
+  },
+  {
+    id: "4",
+    link: "/entrepreneur",
+    name: "Entrepreneur",
+  },
+  {
+    id: "5",
+    link: "/opini",
+    name: "Opini",
+  },
+  {
+    id: "6",
+    link: "/lifestyle",
+    name: "Lifestyle",
+  },
 ];
 
 export default function Navbar() {
