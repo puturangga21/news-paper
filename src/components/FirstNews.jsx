@@ -4,7 +4,6 @@ import CardNews from "./CardNews";
 import HeadingNews from "./HeadingNews";
 import Layout from "./Layout";
 
-import "react-loading-skeleton/dist/skeleton.css";
 import SkeletonLoadingCard from "./SkeletonLoadingCard";
 
 export default function FirstNews() {
