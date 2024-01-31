@@ -39,7 +39,7 @@ export default function Newspage() {
 
       <Layout bgColor="bg-[#F2F4F7]" pTop="py-[40px] lg:py-[80px]">
         <div className="mt-7 flex w-[343px] flex-col gap-4 md:w-[670px] lg:mt-8 lg:w-full lg:gap-5">
-          {isLoading && <SkeletonLoadingCard />}
+          {isLoading && <SkeletonLoadingCard cards={8} />}
           {error && <p>{error}</p>}
           {data.slice(0, totalNews).map((data) => (
             <CardNews
